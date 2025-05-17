@@ -7,7 +7,7 @@ interface IThoughts extends Document {
     reactions: IReaction[]; //como seria ??
 };
 
-interface IReaction extends Document{
+interface IReaction {
     reactionId: ObjectId,
     reactionBody: string,
     username: string,
@@ -68,3 +68,4 @@ thoughtSchema
 const Thought = model('Thought', thoughtSchema);
 
 export default Thought
+

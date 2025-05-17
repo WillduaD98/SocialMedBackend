@@ -50,7 +50,7 @@ const userSchema = new Schema<IUser>(
 userSchema
     .virtual('friendCount')
     .get(function (this: any) {
-        return this.friends.length
+        return this.friends?.length || 0
     });
 
 // Initialize Post model
