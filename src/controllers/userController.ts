@@ -57,6 +57,7 @@ export const updateUser = async (req: Request, res: Response) => {
         if (!user) {
             res.status(404).json({ message: 'No user with this id!'});
         }
+        
         res.json(user)
     } catch (error) {
         console.log(error)
